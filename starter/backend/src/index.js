@@ -35,9 +35,13 @@ app.get('/api/hello-world', (req, res) => {
 })
 
 app.get('/api/comments', async (req, res) => {
-    res.status(200).send({
-        msg: "I should get the comments..."
-    })
+    res.status(200).send([
+        {
+            id: 7163,
+            comment: "I need to implement BadgerChat Nano!",
+            created: new Date()
+        }
+    ])
 })
 
 app.post('/api/comments', async (req, res) => {
